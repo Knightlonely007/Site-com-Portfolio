@@ -1,3 +1,4 @@
+// Iniciando algumas variáveis com 0.
 let projetoIndex = 0;
 let indexSobreMim = 0; 
 
@@ -33,16 +34,8 @@ function atualizarSobreMim(index) {
 
 // Alterna entre os itens do "Sobre Mim", indo para frente ou para trás
 function trocarSobreMim(direcao) {
-    let itens = document.querySelectorAll("#sobreMimDados .sobre-item");
-    indexSobreMim = (indexSobreMim + direcao + itens.length) % itens.length;
-    
-    let novaImagem = itens[indexSobreMim].getAttribute("data-img");
-    let novoTitulo = itens[indexSobreMim].getAttribute("data-titulo");
-    let novaDescricao = itens[indexSobreMim].getAttribute("data-descricao");
-    
-    document.getElementById("imagemSobreMim").src = novaImagem;
-    document.getElementById("tituloSobreMim").textContent = novoTitulo;
-    document.getElementById("descricaoSobreMim").innerHTML = novaDescricao;
+    indexSobreMim = (indexSobreMim + direcao + sobreMimItens.length) % sobreMimItens.length;
+    atualizarSobreMim(indexSobreMim);
 }
 
 // Garante que ao carregar a página, o primeiro projeto e sobre mim sejam exibidos corretamente
@@ -50,7 +43,7 @@ window.onload = function () {
     atualizarConteudo(0);
     atualizarSobreMim(0);
     
-    //Cria um pequeno delay ao recarregar a página, para que ela volte ao topo normalmente.
+    // Cria um pequeno delay ao recarregar a página, para que ela volte ao topo normalmente.
     setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, 100);
