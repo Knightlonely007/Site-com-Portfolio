@@ -1,5 +1,5 @@
 let projetoIndex = 0;
-let indexSobreMim = 0;
+let indexSobreMim = 0; 
 
 // Obtém todos os projetos definidos no HTML
 const projetos = document.querySelectorAll("#projetos .projeto");
@@ -55,4 +55,3 @@ window.onload = function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, 100);
 };
-
