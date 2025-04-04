@@ -9,7 +9,6 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    padding-top: 160px;
     margin: 0;
     overflow-x: hidden;
 }
@@ -17,7 +16,7 @@ body {
 /* ===== Menu de Navegação ===== */
 .menu {
     color: #F2EADF;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -52,10 +51,17 @@ body {
     overflow-wrap: break-word;
     padding: 10px; 
 }
-h1 {
+#meusProjetos {
     margin-top: 80px;
     margin-bottom: 80px;
-    scroll-margin-top: 88px; 
+    scroll-margin-top: 105px;
+    font-size: 50px;
+}
+#sobreMim{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    scroll-margin-top: 51px;
+    font-size: 50px;
 }
 
 /* ===== Containers das divs de navegação ===== */
@@ -69,7 +75,6 @@ h1 {
     border: 2px solid white;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    margin-top: 20px;
 }
 .container:hover {
     border-color: #A69B92;
