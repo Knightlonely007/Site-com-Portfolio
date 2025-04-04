@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900&family=Open+Sans:wght@300..800&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header com o "Menu" -->
+    <header>
+        <div class="menu">
+            <div class="titulo">
+                <h1>Cauã Tyszka</h1>
+                <h2>Analista e Desenvolvedor de Sistemas</h2>
+            </div>
+        </div>
+            <!-- Divs para facilitar a navegação na página -->
+        <div class="container" id="q1" onclick="location.href='#meusProjetos'"></div>
+        <div class="container" id="q2" onclick="location.href='#sobreMim'"></div>
+        <div class="container" id="q3" onclick="location.href='#entreContato'"></div>   
+    </header>
+
+    <!-- Corpo do Site -->
+    <h1 id="meusProjetos">Meus Projetos</h1>
+
+    <!-- Div referente aos Projetos -->
+    <div class="section-container">
+        <section class="projetos">
+            <div class="section-image">
+                <div class="image-container">
+                    <!-- Div com a imagem do projeto -->
+                    <img id="imagemProjeto" src="img/prototipo.jpg" alt="Imagem do prototipo">
+                    <!-- Div com os botões de navegação entre os Projetos -->
+                    <div class="image-button" onclick="trocarImagem(1)">></div>
+                    <div class="image-button-voltar" onclick="trocarImagem(-1)"><</div>
+                </div>
+            </div>
+                <!-- Div com os conteúdos dos projetos -->
+            <div class="section-content">
+                <h2 id="tituloProjeto">Prototipagem de Alta Fidelidade</h2>
+                <p id="descricaoProjeto">
+                    Protótipo de um aplicativo ("Game Note") que atua como "Biblioteca" de jogos, criado em equipe através do Figma, com a implementação de um Mapeamento para facilitar a visão da interatividade durante o uso do App. 
+                    <br>
+                    Link do Figma: 
+                    <a href="https://www.figma.com/proto/Q1HfRUn5TFgOmg1PmlQSLW/Trabalho-de-Intera%C3%A7%C3%A3o-Humano---Computador?node-id=3-2&t=zjYa1Ksj9neRGpTj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" target="_blank">Acesse aqui</a>
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Projetos Ocultos (Guardados no HTML para o JS Ler) -->
+    <div id="projetos" style="display: none;">
+        <div class="projeto" data-img="img/prototipo.jpg" data-titulo="Prototipagem de Alta Fidelidade"
+            data-descricao='Protótipo de um aplicativo ("Game Note") que atua como "Biblioteca" de jogos, criado em equipe através do Figma, com a implementação de um Mapeamento para facilitar a visão da interatividade durante o uso do App.<br><br>
+            Link do Figma: <a href="https://www.figma.com/proto/Q1HfRUn5TFgOmg1PmlQSLW/Trabalho-de-Intera%C3%A7%C3%A3o-Humano---Computador?node-id=3-2&t=zjYa1Ksj9neRGpTj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" target="_blank">Acesse aqui</a>'>
+        </div>
+        <div class="projeto" data-img="img/pygame.png" data-titulo="Mountain Shooter"
+            data-descricao='Trabalho em equipe realizado na faculdade, onde realizamos a criação e implementação de um 3º Nível para o jogo "Mountain Shooter", baseado em Python.<br><br>
+            Link do Projeto no Git: <a href="https://github.com/Knightlonely007/PyGame" target="_blank">Acesse aqui</a>'>
+        </div>
+    </div>    
+
+    <h1 id="sobreMim">Sobre Mim</h1>
+
+    <!-- Div referente ao Sobre Mim -->
+    <div class="section-container">
+        <section class="sobre">
+            <div class="section-image">
+                <div class="image-container">
+                    <!-- Div com a imagem do Sobre mim -->
+                    <img id="imagemSobreMim" src="img/quemEuSou.gif" alt="Imagem representando sobre mim">
+                    <!-- Div com os botões de navegação entre os dados sobre mim -->
+                    <div class="image-button" onclick="trocarSobreMim(1)">></div>
+                    <div class="image-button-voltar" onclick="trocarSobreMim(-1)"><</div>
+                </div>
+            </div>
+            <!-- Div com os conteúdos do Sobre mim -->
+            <div class="section-content">
+                <h2 id="tituloSobreMim">Quem é Cauã Tyszka?</h2>
+                <p id="descricaoSobreMim">
+                    Sou uma pessoa muito curiosa e gosto de estudar diversos temas, tenho uma mente aberta, e estou sempre em busca de oportunidades ou novas experiências. Alguns dos assuntos que mais gosto são Programação e Desenvolvimento, Criptomoedas, IA's, Jogos, Animes e Mangás, e Novas Tecnologias.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Dados Sobre mim Ocultos (Guardados no HTML para o JS Ler) -->
+    <div id="sobreMimDados" style="display: none;">  
+        <div class="sobre-item" data-img="img/quemEuSou.gif" data-titulo="Quem é Cauã Tyszka?" 
+            data-descricao="Sou uma pessoa muito curiosa e gosto de estudar diversos temas, tenho uma mente aberta, e estou sempre em busca de oportunidades ou novas experiências. Alguns dos assuntos que mais gosto são Programação e Desenvolvimento, Criptomoedas, IA's, Jogos, Animes e Mangás, e Novas Tecnologias.">
+        </div>
+        <div class="sobre-item" data-img="img/formacao.gif" data-titulo="Minha Formação" 
+            data-descricao="Concluí meu ensino médio no ano de 2020, realizei um pré-vestibular em 2021, e busquei aprender coisas novas em 2022, a fim de encontrar o melhor caminho para mim e minha carreira. No ano de 2023 optei por seguir dentro da área de TI, mais especificamente na área de Análise e Desenvolvimento de Sistemas, que é aquilo que mais gosto atualmente. No momento, conheço algumas linguagens de programação como Java, Python, C++ e JavaScript, alguns banco de dados como MySQL e Firebase, e algumas ferramentas como Visual Studio, Android Studio, Canvas, Figma, Jira, Excel, entre outras...">
+        </div>
+        <div class="sobre-item" data-img="img/objetivos.gif" data-titulo="Meus Objetivos" 
+            data-descricao="Atualmente busco um estágio ou emprego na área, para entrar no mercado de trabalho e me desenvolver ainda mais, tanto no quesito pessoal, quanto no profissional. E tanto agora, quanto depois, planejo continuar estudando novas ferramentas e tecnologias para me aprofundar na área.">
+        </div>
+    </div>
+
+    <!-- Footer com a parte do Entre em Contato -->
+    <footer>
+        <!-- Div com o gif do footer -->
+        <div class="gif-footer">
+            <img src="img/esperando.gif" alt="GIF animado">
+        </div>
+        <div class="contatos">
+            <p id="entreContato">Entre em Contato</p>
+            <!-- Div com os icones para entrar em contato -->
+            <div class="social-icons">
+                <img src="img/instagram.svg" alt="Instagram">
+                <img src="img/whatsapp.svg" alt="Whatsapp">
+                <img src="img/gmail.svg" alt="Gmail">
+                <img src="img/linkedin.svg" alt="LinkedIn">                
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* ===== Configuração Geral ===== */
+body {
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 160px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ===== Menu de Navegação ===== */
+.menu {
+    color: #F2EADF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #403B38;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* ===== Títulos ===== */
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.titulo h1 {
+    font-size: 70px;
+    margin: 0;
+    text-align: center;
+    width: 100%; 
+}
+.titulo h2 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    width: 100%; 
+}
+h1 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    scroll-margin-top: 88px; 
+}
+
+/* ===== Containers das divs de navegação ===== */
+.container {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+    border-color: #A69B92;
+    transform: scale(1.1);
+}
+
+/* ===== Background das divs de navegação ===== */
+div#q1 {
+    background-image: url("img/projetos.gif");
+    background-size: cover;
+}
+div#q2 {
+    background-image: url("img/Sobre1.gif");
+    background-size: cover;
+}
+div#q3 {
+    background-image: url("img/Contato.gif");
+    background-size: cover;
+}
+
+/* ===== Layout das Seções ===== */
+.section-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 100px 0;
+    flex-wrap: wrap; 
+}
+section {
+    background-color: #F2EADF;
+    color: black;
+    width: 90%; 
+    max-width: 1000px;
+    min-height: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    font-size: large;
+    padding: 20px;
+}
+
+/* ===== Imagens dentro das Seções ===== */
+.section-image {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-image img {
+    border: 3px solid #000;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+}
+
+/* ===== Containers de Imagem ===== */
+.image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px; 
+    overflow: hidden;
+}
+.image-container img {
+    display: block;
+    width: 100%;
+    border-radius: 20px; 
+}
+
+/* ===== Botões sobre Imagens ===== */
+.image-button, .image-button-voltar {
+    position: absolute;
+    top: 0;
+    width: 50px; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.image-button {
+    right: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.image-button-voltar {
+    left: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.image-button:hover, .image-button-voltar:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+/* ===== Conteúdo da Seção ===== */
+.section-content {
+    width: 60%;
+    padding-left: 20px;
+}
+section h2 {
+    margin-bottom: 5px;
+    padding: 5px;
+}
+section p {
+    padding: 5px;
+    margin-top: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    position: relative;
+    background-color: #403B38;
+    color: #F2EADF;
+    text-align: center;
+    z-index: 9999;
+}
+
+/* ===== GIF no Rodapé ===== */
+.gif-footer {
+    position: absolute;
+    bottom: calc(91%); 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    z-index: 10;
+}
+.gif-footer img {
+    width: 100%;
+    height: auto;
+}
+
+/* ===== Contatos ===== */
+.contatos {
+    background-color: #403B38;
+    color: #F2EADF;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    padding: 20px 0;
+}
+.contatos p {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ===== Ícones das Redes Sociais ===== */
+.social-icons {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.social-icons img {
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.social-icons img:hover {
+    transform: scale(1.2); 
+}
