@@ -257,3 +257,10 @@ footer {
 .social-icons img:hover {
     transform: scale(1.2); 
 }
+
+/* ===== Container Personalizado para Telas Menores ===== */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+    }
+}
