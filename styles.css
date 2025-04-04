@@ -4,13 +4,17 @@
     max-width: 100%;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Poppins', 'Open Sans', sans-serif;
     background-color: black;
     color: white;
     text-align: center;
-    margin: 0;
-    overflow-x: hidden;
 }
 
 /* ===== Menu de Navegação ===== */
@@ -79,6 +83,7 @@ body {
 .container:hover {
     border-color: #A69B92;
     transform: scale(1.1);
+    will-change: transform;
 }
 
 /* ===== Background das divs de navegação ===== */
