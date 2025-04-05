@@ -1,7 +1,6 @@
 /* ===== Configuração Geral ===== */
 * {
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 html, body {
@@ -258,9 +257,17 @@ footer {
     transform: scale(1.2); 
 }
 
-/* ===== Container Personalizado para Telas Menores ===== */
+/* ===== Otimizações para Telas Menores ===== */
 @media (max-width: 768px) {
     .container {
         margin: 20px auto;
+    }
+    section {
+        flex-direction: column;
+    }
+    .section-image, .section-content {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
     }
 }
