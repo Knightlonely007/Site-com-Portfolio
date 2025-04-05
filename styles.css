@@ -260,7 +260,7 @@ footer {
 /* ===== Otimizações para Telas Menores ===== */
 @media (max-width: 768px) {
     .container {
-        margin: 20px auto;
+        margin: 40px;
     }
     section {
         flex-direction: column;
