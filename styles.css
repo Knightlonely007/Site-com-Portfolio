@@ -267,7 +267,7 @@ footer {
     .container {
         width: 100%;
         max-width: 300px;
-        margin: 40px;
+        margin: 20px;
     }
     section {
         flex-direction: column;
